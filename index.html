@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComicVault</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1>ComicVault</h1>
+        <p>Organize sua coleção de histórias em quadrinhos</p>
+    </header>
+
+    <main class="container">
+
+        <section class="form-section">
+            <h2 id="form-title">Cadastrar HQ</h2>
+
+            <form id="hq-form">
+                <input type="hidden" id="hq-id">
+
+                <input type="text" id="titulo" placeholder="Título" required>
+                <input type="text" id="autor" placeholder="Autor" required>
+                <input type="text" id="editora" placeholder="Editora" required>
+                <input type="text" id="genero" placeholder="Gênero" required>
+                <input type="number" id="volume" placeholder="Volume/Capitulo" required>
+                <input type="number" id="nota" placeholder="Nota" min="0" max="10" step="0.1" required>
+                <input type="text" id="imagem" placeholder="URL da capa">
+
+                <select id="status" required>
+                    <option value="">Selecione o status</option>
+                    <option value="Lida">Lida</option>
+                    <option value="Lendo">Lendo</option>
+                    <option value="Quero Ler">Quero Ler</option>
+                </select>
+
+                <div class="buttons">
+                    <button type="submit" id="submit-btn">Cadastrar</button>
+                    <button type="button" id="cancel-btn" class="secondary hidden">Cancelar edição</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="filters">
+            <input type="text" id="search-input" placeholder="Buscar por título">
+
+            <select id="filter-status">
+                <option value="">Todos os status</option>
+                <option value="Lida">Lida</option>
+                <option value="Lendo">Lendo</option>
+                <option value="Quero Ler">Quero Ler</option>
+            </select>
+
+            <button id="search-btn">Buscar</button>
+            <button id="clear-btn" class="secondary">Limpar</button>
+        </section>
+
+        <section>
+            <h2>Minha coleção</h2>
+            <div id="message"></div>
+            <div id="hqs-list" class="cards"></div>
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
