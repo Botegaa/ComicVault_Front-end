@@ -32,7 +32,7 @@ A aplicação consome a API REST desenvolvida em Flask e permite cadastrar, visu
 Clone o repositório:
 
 ```bash
-git clone https://github.com/SEU_USUARIO/ComicVault_Front-end.git
+git clone https://github.com/botegaa/ComicVault_Front-end.git
 ```
 
 Entre na pasta:
